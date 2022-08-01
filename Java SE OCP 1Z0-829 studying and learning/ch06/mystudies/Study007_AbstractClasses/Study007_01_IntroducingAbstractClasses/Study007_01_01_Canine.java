@@ -3,9 +3,9 @@ package org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.S
 /* 
  * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % 
- * javac org/curlybrace/oopj/ocp1z0_829/ch06/mystudies/Study007_AbstractClasses/Study007_01_IntroducingAbstractClasses/Canine.java
+ * javac org/curlybrace/oopj/ocp1z0_829/ch06/mystudies/Study007_AbstractClasses/Study007_01_IntroducingAbstractClasses/Study007_01_01_Canine.java
  * curlybrace@saim-MacBook-Pro src % 
- * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.Canine
+ * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.Study007_01_01_Canine
  */
 abstract class AbsClass1{
 	protected abstract void doIt();
@@ -16,7 +16,7 @@ abstract class AbsClass2 extends AbsClass1{
 	protected abstract void doIt();
 }
 
-public abstract class Canine {
+public abstract class Study007_01_01_Canine {
 	static {
 		System.out.println("""
 		--------------------------------------------------------------------------------
@@ -144,31 +144,31 @@ public abstract class Canine {
 	 * Note: Hey! We can write main() method in an abstract method!
 	 */
 	public static void main(String[] args) {
-		Canine c = new Fox();
+		Study007_01_01_Canine c = new Fox();
 		c.bark();
 	}
 }
 
-class Wolf extends Canine{
+class Wolf extends Study007_01_01_Canine{
 	public String getSound() {
 		return "Woooooooof!";
 	}
 }
 
-class Fox extends Canine{
+class Fox extends Study007_01_01_Canine{
 	public String getSound() {
 		return "Squeak!";
 	}	
 }
 
-class Coyote extends Canine{
+class Coyote extends Study007_01_01_Canine{
 	public String getSound() {
 		return "Roar!";
 	}	
 }
 
 /*
-class FennecFox extends Canine{
+class FennecFox extends Study007_01_01_Canine{
 	public int getSound() {
 		return 10;
 	}	
@@ -178,10 +178,10 @@ DOES NOT COMPILE
 Reason: Invalid method override for the abstract method getSound() of the parent class: 
 non-covariant return types.
 ------------------
-error: FennecFox is not abstract and does not override abstract method getSound() in Canine
-class FennecFox extends Canine{
+error: FennecFox is not abstract and does not override abstract method getSound() in Study007_01_01_Canine
+class FennecFox extends Study007_01_01_Canine{
 ^
-error: getSound() in FennecFox cannot override getSound() in Canine
+error: getSound() in FennecFox cannot override getSound() in Study007_01_01_Canine
 	public int getSound() {
 	           ^
   return type int is not compatible with String
@@ -189,19 +189,19 @@ error: getSound() in FennecFox cannot override getSound() in Canine
 */
 
 /*
-class ArcticFox extends Canine{}
+class ArcticFox extends Study007_01_01_Canine{}
 -----------------
 DOES NOT COMPILE
 Reason: It should override abstract method getSound() of the parent class.
 -----------------
-error: ArcticFox is not abstract and does not override abstract method getSound() in Canine
-class ArcticFox extends Canine{}
+error: ArcticFox is not abstract and does not override abstract method getSound() in Study007_01_01_Canine
+class ArcticFox extends Study007_01_01_Canine{}
 ^
 -----------------
 */
 
 /*
-class DireWolf extends Canine{
+class DireWolf extends Study007_01_01_Canine{
 	public abstract void rest();
 	
 	public String getSound() {
@@ -213,13 +213,13 @@ DOES NOT COMPILE
 Reason: A non-abstract (concrete) class cannot declare an abstract method. 
 -----------------
 error: DireWolf is not abstract and does not override abstract method rest() in DireWolf
-class DireWolf extends Canine{
+class DireWolf extends Study007_01_01_Canine{
 ^
 -----------------
 */
 
 /*
-class Jackal extends Canine{
+class Jackal extends Study007_01_01_Canine{
 	public abstract String name;
 
 	public String getSound() {

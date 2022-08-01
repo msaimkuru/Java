@@ -3,9 +3,9 @@ package org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.S
 /* 
  * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % 
- * javac org/curlybrace/oopj/ocp1z0_829/ch06/mystudies/Study007_AbstractClasses/Study007_01_IntroducingAbstractClasses/SpottingInvalidDeclarations.java
+ * javac org/curlybrace/oopj/ocp1z0_829/ch06/mystudies/Study007_AbstractClasses/Study007_01_IntroducingAbstractClasses/Study007_01_03_SpottingInvalidDeclarations.java
  * curlybrace@saim-MacBook-Pro src % 
- * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.SpottingInvalidDeclarations
+ * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.Study007_01_03_SpottingInvalidDeclarations
  */
 
 abstract class InvalidDeclarations{
@@ -111,7 +111,7 @@ abstract class InvalidDeclaration5{
      */
 }
 
-public class SpottingInvalidDeclarations {
+public class Study007_01_03_SpottingInvalidDeclarations {
 	static {
 		System.out.println("""
 		--------------------------------------------------------------------------------
@@ -129,8 +129,8 @@ public class SpottingInvalidDeclarations {
 	   DOES NOT COMPILE
 	   Violated Rule: Abstract methods cannot be declared in concrete classes. 
 	   ----------------	   
-       error: SpottingInvalidDeclarations is not abstract and does not override abstract method abstractMethodInConcreteClassIsNotAllowed() in SpottingInvalidDeclarations
-       public class SpottingInvalidDeclarations {
+       error: Study007_01_03_SpottingInvalidDeclarations is not abstract and does not override abstract method abstractMethodInConcreteClassIsNotAllowed() in Study007_01_03_SpottingInvalidDeclarations
+       public class Study007_01_03_SpottingInvalidDeclarations {
               ^
     */   
 }
