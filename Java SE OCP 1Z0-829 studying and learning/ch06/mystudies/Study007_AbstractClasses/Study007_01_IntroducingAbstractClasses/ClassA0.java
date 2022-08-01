@@ -15,16 +15,16 @@ abstract class A0$ {
 		----------------------------------------------------------------------			
 		Abstract class A0$'s 1st static initializer starts.		
 		----------------------------------------------------------------------	
-		  I n f o:
+		I n f o:
 		----------------------------------------------------------------------		
-		  * An abstract class cannot be instantiated directly, but, can only 
-		  be initialized as part of the instantiation of a non-abstract
-		  (concrete) subclass.
+		* An abstract class cannot be instantiated directly, but, can only 
+		be initialized as part of the instantiation of a non-abstract
+		(concrete) subclass.
 		  
-		  * The primary difference between a constructor in an abstract class
-		  and a non-abstract (concrete) class is that a constructor in an 
-		  abstract class can be called only when it is being initialized by a
-		  non-abstract (concrete) subclass.
+		* The primary difference between a constructor in an abstract class
+		and a non-abstract (concrete) class is that a constructor in an 
+		abstract class can be called only when it is being initialized by a
+		non-abstract (concrete) subclass.
 		----------------------------------------------------------------------
 		Abstract class A0$'s 1st static initializer ends.
 		----------------------------------------------------------------------
@@ -49,9 +49,10 @@ abstract class A0$ {
 		----------------------------------------------------------------------			
 		Abstract class A0$'s no-argument constructor starts.
 		----------------------------------------------------------------------""");
-		abstractMethodOfA0$("abstractMethodOfA0$() called from constructor A0$() runs "); //??? how possible it calls the child method from here???
+		// How possible it calls the child method from here? It's about polymorphism.
+		abstractMethodOfA0$("abstractMethodOfA0$() called from constructor A0$() runs ");
 		//
-		instanceMethodOfA0$();
+		privateInstanceMethodOfA0$();
 		//
 		System.out.println("""
 		----------------------------------------------------------------------
@@ -64,9 +65,10 @@ abstract class A0$ {
 	protected abstract void abstractMethodOfA0$(String s);
 	
 	//
-	private void instanceMethodOfA0$() {
+	private void privateInstanceMethodOfA0$() {
 		System.out.println("---------------------------------------------------------------------");
-		abstractMethodOfA0$("abstractMethodOfA0$() called from instanceMethodOfA0$() runs "); //??? how possible it calls the child method from here???
+		// How possible it calls the child method from here? It's about polymorphism.
+		abstractMethodOfA0$("abstractMethodOfA0$() called from privateInstanceMethodOfA0$$() runs ");
 		System.out.println("----------------------------------------------------------------------");		
 	}
 }
@@ -85,13 +87,13 @@ public class ClassA0 extends A0${
 	public static void main(String[] args) {
 		System.out.println("""
 				--------------------------------------------------------------------------
-				Creating a new instance of A0 which is a concrete child class of A0$ starts.	
+				Creating a new instance of ClassA0 which is a concrete child class of A0$ starts.	
 				--------------------------------------------------------------------------			
 				""");
 		var o0 = new ClassA0();
 		System.out.println("""
 				--------------------------------------------------------------------------
-				Creating a new instance of A0 which is a concrete child class of A0$ ends.	
+				Creating a new instance of ClassA0 which is a concrete child class of A0$ ends.	
 				--------------------------------------------------------------------------			
 				""");
 		//
@@ -106,7 +108,9 @@ public class ClassA0 extends A0${
 				Creating a new instance of A1 which is a concrete child class of A0$ ends.	
 				--------------------------------------------------------------------------			
 				""");
+		
 		/*
+		   -----------------
 		   DOES NOT COMPILE:
 		   -----------------
 		   var o1 = new A0$();
@@ -114,7 +118,6 @@ public class ClassA0 extends A0${
 		   error: A0$ is abstract; cannot be instantiated
 		   var o1 = new A0$();
 		            ^
-           1 error
-         */
+		 */
 	}
 }
