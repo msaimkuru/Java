@@ -62,7 +62,7 @@ public abstract class Canine {
 		implement all inherited abstract methods. This includes implementing any
 		inherited abstract methods from inherited interfaces.
 		
-		8) Java does not permit a class or method to be marked both abstract and final.
+		8) Java DOES NOT permit a class or method to be marked both abstract and final.
 		
 		9) Abstract classes are initialized with constructors in the same way as non-
 		abstract classes. For example, if an abstract class does not provide a 
@@ -93,7 +93,7 @@ public abstract class Canine {
 		1- An abstract method is always declared without a body. It also includes a 
 		semicolon (;) after the method declaration.
 		
-		2- Only instance methods can be marked abstract within a class, not variables, 
+		2- ONLY instance methods can be marked abstract within a class, not variables, 
 		constructors, or static methods.
 		
 		3- An abstract method can only be declared in an abstract class or an interface.
@@ -138,7 +138,8 @@ public abstract class Canine {
 	public void bark() {
 		System.out.println(getSound());
 	}
-	// 
+	//
+	
 	/* 
 	 * Note: Hey! We can write main() method in an abstract method!
 	 */

@@ -3,9 +3,9 @@ package org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.S
 /* 
  * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % 
- * javac org/curlybrace/oopj/ocp1z0_829/ch06/mystudies/Study007_AbstractClasses/Study007_01_IntroducingAbstractClasses/A0.java
+ * javac org/curlybrace/oopj/ocp1z0_829/ch06/mystudies/Study007_AbstractClasses/Study007_01_IntroducingAbstractClasses/ClassA0.java
  * curlybrace@saim-MacBook-Pro src % 
- * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.A0
+ * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.ClassA0
  */
 
 abstract class A0$ {
@@ -77,14 +77,35 @@ class A1 extends A0${
 	}
 }
 
-public class A0 extends A0${
+public class ClassA0 extends A0${
 	protected void abstractMethodOfA0$(String s) {
-		System.out.println(s + "In concrete implementation of abstractMethodOfA0$() in instance of Class A0.");
+		System.out.println(s + "In concrete implementation of abstractMethodOfA0$() in instance of Class ClassA0.");
 	}
 	
 	public static void main(String[] args) {
-		var o0 = new A0();
+		System.out.println("""
+				--------------------------------------------------------------------------
+				Creating a new instance of A0 which is a concrete child class of A0$ starts.	
+				--------------------------------------------------------------------------			
+				""");
+		var o0 = new ClassA0();
+		System.out.println("""
+				--------------------------------------------------------------------------
+				Creating a new instance of A0 which is a concrete child class of A0$ ends.	
+				--------------------------------------------------------------------------			
+				""");
+		//
+		System.out.println("""
+				--------------------------------------------------------------------------
+				Creating a new instance of A1 which is a concrete child class of A0$ starts.	
+				--------------------------------------------------------------------------			
+				""");
 		var o1 = new A1();
+		System.out.println("""
+				--------------------------------------------------------------------------
+				Creating a new instance of A1 which is a concrete child class of A0$ ends.	
+				--------------------------------------------------------------------------			
+				""");
 		/*
 		   DOES NOT COMPILE:
 		   -----------------
