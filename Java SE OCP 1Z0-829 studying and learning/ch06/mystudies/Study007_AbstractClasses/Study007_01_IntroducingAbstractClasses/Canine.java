@@ -30,9 +30,9 @@ public abstract class Canine {
 		In other words, we want to enforce all objects of references of type of abstract 
 		parent classes to have a particular subclass type.
 		
-		* An abstract class is a class declared with the a b s t r a c t modifier.
+		* An abstract class is a class declared with the  a b s t r a c t  modifier.
 		
-		* An abstract class cannot be instantiated directly.
+		* An abstract class CANNOT be instantiated directly.
 		
 		* An abstract class can extend a concrete class or an abstract class, and vice 
 		versa. 		
@@ -40,14 +40,14 @@ public abstract class Canine {
 		--------------------------------------------------------------------------------
 		R u l e s   f o r   A b s t r a c t   C l a s s e s
 		--------------------------------------------------------------------------------
-		1) An abstract class cannot be instantiated directly and may contain 
+		1) An abstract class CANNOT be instantiated directly and may contain 
 		a b s t r a c t   m e t h o d s  as well as  c o n c r e t e   m e t h o d s.
 						
-		2) An abstract class cannot be instantiated directly, but, can only be 
+		2) An abstract class CANNOT be instantiated directly, but, can only be 
 		initialized as part of the instantiation of a non-abstract/concrete subclass.
 		
 		3) An abstract class can have (but is not required) abstract methods. A
-		non-abstract/concrete class cannot have abstract methods.
+		non-abstract/concrete class CANNOT have abstract methods.
 		
 		4) An abstract class can contain all of the same members as a non-abstract class
 		, including variables, static and instance methods, constructors, etc.
@@ -55,7 +55,7 @@ public abstract class Canine {
 		5) Like the final modifier, the abstract modifier can be placed before or after
 		the access modifier in class and method declarations.
 		
-		6) The abstract modifier cannot be placed after the class keyword in a class
+		6) The abstract modifier CANNOT be placed after the class keyword in a class
 		declaration or after the return type in a method declaration.
 		
 		7) The first concrete subclass that extends an abstract class is required to
@@ -72,7 +72,7 @@ public abstract class Canine {
 		10) the primary difference between a constructor in an abstract class and a
 		non-abstract class is that a constructor in an abstract class can be called only 
 		when it is being initialized by a non-abstract subclass. This makes sense, as
-		abstract classes cannot be directly instantiated.
+		abstract classes CANNOT be directly instantiated.
 		
 		--------------------------------------------------------------------------------
 		I n t r o d u c i n g   A b s t r a c t   M e t h o d s
@@ -101,9 +101,9 @@ public abstract class Canine {
 		4- A non-abstract (concrete) class that extends an abstract class must implement
 		all inherited abstract methods.
 		
-		5- A method cannot be marked as both abstract and final.
+		5- A method CANNOT be marked as both abstract and final.
 		
-		6- A method cannot be marked as both abstract and private.
+		6- A method CANNOT be marked as both abstract and private.
 		
 		7- An abstract method can be overridden with another abstract method declaration
 		or a concrete method implementation.
@@ -173,12 +173,11 @@ class FennecFox extends Canine{
 		return 10;
 	}	
 }
-
-DOES NOT COMPILE:
 ------------------
+DOES NOT COMPILE
 Reason: Invalid method override for the abstract method getSound() of the parent class: 
 non-covariant return types.
-
+------------------
 error: FennecFox is not abstract and does not override abstract method getSound() in Canine
 class FennecFox extends Canine{
 ^
@@ -186,18 +185,19 @@ error: getSound() in FennecFox cannot override getSound() in Canine
 	public int getSound() {
 	           ^
   return type int is not compatible with String
+------------------  
 */
 
 /*
 class ArcticFox extends Canine{}
-
-DOES NOT COMPILE:
 -----------------
+DOES NOT COMPILE
 Reason: It should override abstract method getSound() of the parent class.
-
+-----------------
 error: ArcticFox is not abstract and does not override abstract method getSound() in Canine
 class ArcticFox extends Canine{}
 ^
+-----------------
 */
 
 /*
@@ -208,15 +208,14 @@ class DireWolf extends Canine{
 		return "Roof!";
 	}	
 }
-
-DOES NOT COMPILE:
 -----------------
+DOES NOT COMPILE
 Reason: A non-abstract (concrete) class cannot declare an abstract method. 
-
+-----------------
 error: DireWolf is not abstract and does not override abstract method rest() in DireWolf
 class DireWolf extends Canine{
 ^
-1 error
+-----------------
 */
 
 /*
@@ -227,14 +226,12 @@ class Jackal extends Canine{
 		return "Laugh!";
 	}	
 }
-
-DOES NOT COMPILE:
 ------------------
+DOES NOT COMPILE
 Reason: Variables cannot be marked abstract.
-
+------------------
 error: modifier abstract not allowed here
 	public abstract String name;
 	                       ^
-1 error
-
+------------------	                       
 */
