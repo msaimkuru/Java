@@ -139,7 +139,7 @@ public abstract class Study007_01_01_Canine {
 	//
 	
 	/* 
-	 * Note: Hey! We can write main() method in an abstract method!
+	 * Note: Hey! We can write main() method in an abstract class!
 	 */
 	public static void main(String[] args) {
 		Study007_01_01_Canine c = new Fox();
