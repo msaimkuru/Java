@@ -35,10 +35,34 @@ public abstract class Study007_01_01_Canine {
 		* An abstract class CANNOT be instantiated directly.
 		
 		* An abstract class can extend a concrete class or an abstract class, and vice 
-		versa. 		
-		
+		versa.
+
 		--------------------------------------------------------------------------------
-		R u l e s   f o r   A b s t r a c t   C l a s s e s
+		W h e n   T o   U s e   A b s t r a c t   C l a s s e s
+		--------------------------------------------------------------------------------
+		An abstract class is most commonly used when we want another class to inherit
+		properties of a particular class, but we want the subclass to fill in some of
+		the implementation details.
+		
+		Abstract classes can be used to define a framework that other developers write
+		subclasses against.				
+
+		--------------------------------------------------------------------------------
+		I n t r o d u c i n g   A b s t r a c t   M e t h o d s
+		--------------------------------------------------------------------------------				
+		* An abstract method is a method declared with the abstract modifier that does 
+		not define a body. 
+		
+		Put another way, an abstract method forces subclasses to override the method. 
+		This helps the polymorphism, of course.
+		
+		By declaring a method abstract, we can guarantee that some version will be 
+		available on an instance without having to specify what that version is in the
+		abstract parent class.
+						
+		--------------------------------------------------------------------------------
+		R u l e s   f o r   A b s t r a c t   C l a s s e s  & 
+		                    A b s t r a c t   M e t h o d s
 		--------------------------------------------------------------------------------
 		1) An abstract class CANNOT be instantiated directly and may contain 
 		a b s t r a c t   m e t h o d s  as well as  c o n c r e t e   m e t h o d s.
@@ -74,52 +98,26 @@ public abstract class Study007_01_01_Canine {
 		when it is being initialized by a non-abstract subclass. This makes sense, as
 		abstract classes CANNOT be directly instantiated.
 		
-		--------------------------------------------------------------------------------
-		I n t r o d u c i n g   A b s t r a c t   M e t h o d s
-		--------------------------------------------------------------------------------				
-		* An abstract method is a method declared with the abstract modifier that does 
-		not define a body. 
-		
-		Put another way, an abstract method forces subclasses to override the method. 
-		This helps the polymorphism, of course.
-		
-		By declaring a method abstract, we can guarantee that some version will be 
-		available on an instance without having to specify what that version is in the
-		abstract parent class.
+		11) ONLY instance methods can be marked abstract within a class, not variables, 
+		constructors, or static methods.
 		
 		--------------------------------------------------------------------------------
 		R u l e s   f o r   A b s t r a c t   M e t h o d s
 		--------------------------------------------------------------------------------
-		1- An abstract method is always declared without a body. It also includes a 
+		12) An abstract method is always declared without a body. It also includes a 
 		semicolon (;) after the method declaration.
 		
-		2- ONLY instance methods can be marked abstract within a class, not variables, 
-		constructors, or static methods.
+		13) An abstract method can only be declared in an abstract class or an interface.
 		
-		3- An abstract method can only be declared in an abstract class or an interface.
+		14) A method CANNOT be marked as both abstract and final.
 		
-		4- A non-abstract (concrete) class that extends an abstract class must implement
-		all inherited abstract methods.
+		15) A method CANNOT be marked as both abstract and private.
 		
-		5- A method CANNOT be marked as both abstract and final.
-		
-		6- A method CANNOT be marked as both abstract and private.
-		
-		7- An abstract method can be overridden with another abstract method declaration
+		16) An abstract method can be overridden with another abstract method declaration
 		or a concrete method implementation.
 		
-		8- Overriding an abstract method follows the existing rules for overriding
+		17) Overriding an abstract method follows the existing rules for overriding
 		methods.
-		
-		--------------------------------------------------------------------------------
-		W h e n   T o   U s e   A b s t r a c t   C l a s s e s
-		--------------------------------------------------------------------------------
-		An abstract class is most commonly used when we want another class to inherit
-		properties of a particular class, but we want the subclass to fill in some of
-		the implementation details.
-		
-		Abstract classes can be used to define a framework that other developers write
-		subclasses against.
 		
 		--------------------------------------------------------------------------------
 		E x a m p l e   M o d e l
@@ -192,28 +190,11 @@ error: getSound() in FennecFox cannot override getSound() in Study007_01_01_Cani
 class ArcticFox extends Study007_01_01_Canine{}
 -----------------
 DOES NOT COMPILE
-Reason: It should override abstract method getSound() of the parent class.
+Violation of Rule 7: The first concrete subclass that extends an abstract class is required to
+                     implement all inherited abstract methods. 
 -----------------
 error: ArcticFox is not abstract and does not override abstract method getSound() in Study007_01_01_Canine
 class ArcticFox extends Study007_01_01_Canine{}
-^
------------------
-*/
-
-/*
-class DireWolf extends Study007_01_01_Canine{
-	public abstract void rest();
-	
-	public String getSound() {
-		return "Roof!";
-	}	
-}
------------------
-DOES NOT COMPILE
-Reason: A non-abstract (concrete) class cannot declare an abstract method. 
------------------
-error: DireWolf is not abstract and does not override abstract method rest() in DireWolf
-class DireWolf extends Study007_01_01_Canine{
 ^
 -----------------
 */
@@ -228,10 +209,28 @@ class Jackal extends Study007_01_01_Canine{
 }
 ------------------
 DOES NOT COMPILE
-Reason: Variables cannot be marked abstract.
+Violation of Rule 11: Variables cannot be marked abstract.
 ------------------
 error: modifier abstract not allowed here
 	public abstract String name;
 	                       ^
 ------------------	                       
+*/
+
+/*
+class DireWolf extends Study007_01_01_Canine{
+	public abstract void rest();
+	
+	public String getSound() {
+		return "Roof!";
+	}	
+}
+-----------------
+DOES NOT COMPILE
+Violation of Rule 13: An abstract method can only be declared in an abstract class or an interface.
+-----------------
+error: DireWolf is not abstract and does not override abstract method rest() in DireWolf
+class DireWolf extends Study007_01_01_Canine{
+^
+-----------------
 */
