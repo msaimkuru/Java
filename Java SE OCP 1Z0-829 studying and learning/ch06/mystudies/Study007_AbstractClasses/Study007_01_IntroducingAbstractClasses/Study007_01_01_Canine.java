@@ -44,6 +44,8 @@ public abstract class Study007_01_01_Canine {
 		
 		* An abstract class can extend a concrete class or an abstract class, and vice 
 		versa.
+		
+		* An abstract class becomes usable when it is extended by a concrete subclass.
 
 		--------------------------------------------------------------------------------
 		W h e n   T o   U s e   A b s t r a c t   C l a s s e s
