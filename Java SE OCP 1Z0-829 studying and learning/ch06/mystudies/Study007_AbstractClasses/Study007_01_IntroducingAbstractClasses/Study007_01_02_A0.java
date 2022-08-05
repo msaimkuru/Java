@@ -1,5 +1,9 @@
 package org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses;
 
+/*
+ * Creating Constructors in Abstract Classes
+ */
+
 /* 
  * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % 
