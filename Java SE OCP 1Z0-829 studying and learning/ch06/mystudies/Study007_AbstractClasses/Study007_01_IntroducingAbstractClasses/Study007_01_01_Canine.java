@@ -7,11 +7,16 @@ package org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.S
  * curlybrace@saim-MacBook-Pro src % 
  * java org.curlybrace.oopj.ocp1z0_829.ch06.mystudies.Study007_AbstractClasses.Study007_01_IntroducingAbstractClasses.Study007_01_01_Canine
  */
+
 abstract class AbsClass1{
 	protected abstract void doIt();
 }
 
 abstract class AbsClass2 extends AbsClass1{
+	/*
+	 * An abstract subclass can leave an abstract method of its parent class 
+	 * as abstract as well as it can implement it.
+	 */
 	@Override
 	protected abstract void doIt();
 }
@@ -27,12 +32,15 @@ public abstract class Study007_01_01_Canine {
 		of the subclasses, but perhaps we don't want them to be able to create a parent 
 		class instance.
 		
-		In other words, we want to enforce all objects of references of type of abstract 
-		parent classes to have a particular subclass type.
+		In other words, by making a parent class abstract,  we want to enforce all 
+		objects of references having type of the parent classes to have a particular 
+		subclass type.
 		
 		* An abstract class is a class declared with the  a b s t r a c t  modifier.
 		
 		* An abstract class CANNOT be instantiated directly.
+		
+		* An abstract class may contain concrete methods as well as abstract methods.
 		
 		* An abstract class can extend a concrete class or an abstract class, and vice 
 		versa.
@@ -50,8 +58,8 @@ public abstract class Study007_01_01_Canine {
 		--------------------------------------------------------------------------------
 		I n t r o d u c i n g   A b s t r a c t   M e t h o d s
 		--------------------------------------------------------------------------------				
-		* An abstract method is a method declared with the abstract modifier that does 
-		not define a body. 
+		* An abstract method is a method declared with the a b s t r a c t modifier that
+		does not define a body. 
 		
 		Put another way, an abstract method forces subclasses to override the method. 
 		This helps the polymorphism, of course.
