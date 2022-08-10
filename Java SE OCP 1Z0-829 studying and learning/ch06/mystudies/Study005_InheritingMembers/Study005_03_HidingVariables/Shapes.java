@@ -66,7 +66,7 @@ abstract class AbstractShape {
     }
 
     /*
-     * Does exact the same thing as the method printVariables(). 
+     * Does exact the same thing as the method printVariables1(). 
      * But this method will be overridden in the child classes to show the effect of overriding and variable hiding.
      */
     public void printVariables2() {
