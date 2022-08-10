@@ -93,7 +93,7 @@ class Shape extends AbstractShape{
 	@Override
 	public double getPerimeter() {
 		return -1;
-	}	
+	}
 }
 
 class Circle extends Shape {
@@ -210,54 +210,54 @@ public class Shapes {
 		Shape shtr = trng;
 		//
 		System.out.println("------------------------------ Investigation of Inheritance: Inherited Method & Hidden Variables------------------------------");
-		shcr.printVariables1();	//	Prints	--> null, 0, false
-		crcl.printVariables1();	//	Prints	--> null, 0, false
+		shcr.printVariables1(); // Prints --> null, 0, false
+		crcl.printVariables1(); // Prints --> null, 0, false
 		
 		System.out.println();
 		
 		System.out.println("------------------------------ Investigation of Inheritance: Inherited Method & UnHidden Variables------------------------------");
-		shsq.printVariables1();	//	Prints	--> Square, 4, true
-		sqre.printVariables1();	//	Prints	--> Square, 4, true
-		shtr.printVariables1();	//	Prints	--> Triangle, 3, true
-		trng.printVariables1();	//	Prints	--> Triangle, 3, true	
+		shsq.printVariables1(); // Prints --> Square, 4, true
+		sqre.printVariables1(); // Prints --> Square, 4, true
+		shtr.printVariables1(); // Prints --> Triangle, 3, true
+		trng.printVariables1(); // Prints --> Triangle, 3, true	
 		
 		System.out.println();
 		
 		System.out.println("------------------------------ Investigation of Inheritance: Overriding Method & Hiding Variables ------------------------------");
-		shcr.printVariables2();	//	Prints	--> Circle, -1, true
-		crcl.printVariables2();	//	Prints	--> Circle, -1, true
+		shcr.printVariables2(); // Prints --> Circle, -1, true
+		crcl.printVariables2(); // Prints --> Circle, -1, true
 		
 		System.out.println();
 		
 		System.out.println("------------------------------ Investigation of Inheritance: Overriding Method & UnHidden Variables ------------------------------");
-		shsq.printVariables2();	//	Prints	--> Square, 4, true
-		sqre.printVariables2();	//	Prints	--> Square, 4, true
-		shtr.printVariables2();	//	Prints	--> Triangle, 3, true
-		trng.printVariables2();	//	Prints	--> Triangle, 3, true			
+		shsq.printVariables2(); // Prints --> Square, 4, true
+		sqre.printVariables2(); // Prints --> Square, 4, true
+		shtr.printVariables2(); // Prints --> Triangle, 3, true
+		trng.printVariables2(); // Prints --> Triangle, 3, true
 
 		System.out.println();
 		
-		System.out.println(Math.round(shcr.getArea() * 100.0)/100.0);	//	Prints	--> 3.14
-		System.out.println(Math.round(crcl.getArea() * 100.0)/100.0);	//	Prints	--> 3.14
-		System.out.println(Math.round(shsq.getArea() * 100.0)/100.0);	//	Prints	--> 100.0
-		System.out.println(Math.round(sqre.getArea() * 100.0)/100.0);	//	Prints	--> 100.0
+		System.out.println(Math.round(shcr.getArea() * 100.0)/100.0); // Prints --> 3.14
+		System.out.println(Math.round(crcl.getArea() * 100.0)/100.0); // Prints --> 3.14
+		System.out.println(Math.round(shsq.getArea() * 100.0)/100.0); // Prints --> 100.0
+		System.out.println(Math.round(sqre.getArea() * 100.0)/100.0); // Prints --> 100.0
 		//
-		System.out.println(Math.round(((Shape)sqre).getArea() * 100.0)/100.0);	//	Prints	--> 100.0
+		System.out.println(Math.round(((Shape)sqre).getArea() * 100.0)/100.0); // Prints --> 100.0
 		//
 		System.out.println("------------------------------ Investigation of Hidden and Hiding Variables ------------------------------ ");
-		System.out.println(shcr.nameOfShape + ", " + shcr.numberOfEdges + ", " + shcr.isConvex);	//	Prints	--> null, 0, false
-		System.out.println(crcl.nameOfShape + ", " + crcl.numberOfEdges + ", " + crcl.isConvex);	//	Prints	--> Circle, -1, true
-		System.out.println(shsq.nameOfShape + ", " + shsq.numberOfEdges + ", " + shsq.isConvex);	//	Prints	--> Square, 4, true
-		System.out.println(sqre.nameOfShape + ", " + sqre.numberOfEdges + ", " + sqre.isConvex);	//	Prints	--> Square, 4, true
-		System.out.println(shtr.nameOfShape + ", " + shtr.numberOfEdges + ", " + shtr.isConvex);	//	Prints	--> Triangle, 3, true
-		System.out.println(trng.nameOfShape + ", " + trng.numberOfEdges + ", " + trng.isConvex);	//	Prints	--> Triangle, 3, true	
+		System.out.println(shcr.nameOfShape + ", " + shcr.numberOfEdges + ", " + shcr.isConvex); // Prints --> null, 0, false
+		System.out.println(crcl.nameOfShape + ", " + crcl.numberOfEdges + ", " + crcl.isConvex); // Prints --> Circle, -1, true
+		System.out.println(shsq.nameOfShape + ", " + shsq.numberOfEdges + ", " + shsq.isConvex); // Prints --> Square, 4, true
+		System.out.println(sqre.nameOfShape + ", " + sqre.numberOfEdges + ", " + sqre.isConvex); // Prints --> Square, 4, true
+		System.out.println(shtr.nameOfShape + ", " + shtr.numberOfEdges + ", " + shtr.isConvex); // Prints --> Triangle, 3, true
+		System.out.println(trng.nameOfShape + ", " + trng.numberOfEdges + ", " + trng.isConvex); // Prints --> Triangle, 3, true 
 		//
 		System.out.println("------------------------------ Demonstrating Area and Perimeter Calculations ------------------------------ ");
-		System.out.println("Area of Circle      --> " + Math.round(crcl.getArea() * 100.0)/100.0);		//	Prints	--> 3.14
-		System.out.println("Perimeter of Circle --> " + Math.round(crcl.getPerimeter() * 100.0)/100.0);	//	Prints	--> 6.28
-		System.out.println("Area of Square      --> " + Math.round(sqre.getArea() * 100.0)/100.0);		//	Prints	--> 100.0
-		System.out.println("Perimeter of Square --> " + Math.round(sqre.getPerimeter() * 100.0)/100.0);	//	Prints	--> 40.0		
-		System.out.println("Area of Triangle      --> " + Math.round(trng.getArea() * 100.0)/100.0);		//	Prints	--> 6.0
-		System.out.println("Perimeter of Triangle --> " + Math.round(trng.getPerimeter() * 100.0)/100.0);	//	Prints	--> 12.0
+		System.out.println("Area of Circle      --> " + Math.round(crcl.getArea() * 100.0)/100.0);        // Prints	--> 3.14
+		System.out.println("Perimeter of Circle --> " + Math.round(crcl.getPerimeter() * 100.0)/100.0);   // Prints	--> 6.28
+		System.out.println("Area of Square      --> " + Math.round(sqre.getArea() * 100.0)/100.0);        // Prints --> 100.0
+		System.out.println("Perimeter of Square --> " + Math.round(sqre.getPerimeter() * 100.0)/100.0);   // Prints --> 40.0
+		System.out.println("Area of Triangle      --> " + Math.round(trng.getArea() * 100.0)/100.0);      // Prints --> 6.0
+		System.out.println("Perimeter of Triangle --> " + Math.round(trng.getPerimeter() * 100.0)/100.0); // Prints --> 12.0
 	}
 }
