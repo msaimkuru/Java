@@ -45,6 +45,7 @@ public final class A0 {
 		
 		Instead of using the reference type supplied by the caller we can make a copy 
 		of the object using that reference to make the object immutable.
+		
 		--------------------------------------------------------------------------------
 		E X A M P L E : C l a s s   A0   i s   n o t   I m m u t a b l e 
 		--------------------------------------------------------------------------------
