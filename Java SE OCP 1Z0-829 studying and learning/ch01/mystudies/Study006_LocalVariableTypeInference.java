@@ -9,6 +9,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch01.mystudies;
  * 1. Understanding the Local Variable Type Inference
  * ------------
  * Difficulty: Medium
+ * ------------
+ * NOTES
  * ------------ 
  */
 

@@ -9,8 +9,10 @@ import java.util.Random;
  * Objectives:
  * ------------ 
  * 1. Understanding java.util.Random
- * ------------
+ * ------------ 
  * Difficulty: Easy
+ * ------------
+ * NOTES
  * ------------ 
  */
 

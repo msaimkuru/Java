@@ -9,6 +9,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch01.mystudies;
  * 1. Understanding the need for initializing local variables before they are used.
  * ------------
  * Difficulty: Medium
+ * ------------
+ * NOTES
  * ------------ 
  */
 

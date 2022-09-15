@@ -9,9 +9,10 @@ package org.curlybrace.oopj.ocp1z0_829.ch01.mystudies;
  * 1. Understanding the String Text Block
  * ------------
  * Difficulty: Medium
+ * ------------
+ * NOTES
  * ------------ 
  */
-
 
 /* 
  * Terminal commands to run program
@@ -21,7 +22,7 @@ package org.curlybrace.oopj.ocp1z0_829.ch01.mystudies;
 
 public class Study007_TextBlock {
 	static String st1 = "Saim Kuru\n\s\s\s\sBest Wishes";
-	//
+	
 	//String text blocks
 	static String tb1 = """
                         Saim Kuru
