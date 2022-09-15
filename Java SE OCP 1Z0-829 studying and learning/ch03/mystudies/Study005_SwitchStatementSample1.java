@@ -34,7 +34,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch03.mystudies;
  * ------------  
  */
 
-/* Terminal commands to run program
+/* 
+ * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % javac org/curlybrace/oopj/ocp1z0_829/ch03/mystudies/Study005_SwitchStatementSample1.java
  * curlybrace@saim-MacBook-Pro src % java org.curlybrace.oopj.ocp1z0_829.ch03.mystudies.Study005_SwitchStatementSample1      
  */

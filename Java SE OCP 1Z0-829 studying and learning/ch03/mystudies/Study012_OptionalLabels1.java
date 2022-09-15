@@ -1,36 +1,37 @@
 package org.curlybrace.oopj.ocp1z0_829.ch03.mystudies;
 
 /**
-* @author	Saim Kuru
-* @version 1.0
-* ------------
-* Objectives:
-* ------------ 
-* 1. Understanding LABELS
-* ------------ 
-* Difficulty: Easy
-* ------------
-* NOTES
-* ------------
-* 1) Code blocks, if statements, switch statements, and loops can all have 
-* optional labels.
-* 
-* 2) A label is an optional pointer to the head of a statement that allows the
-* application flow to jump to it or break from it.
-* 
-* 3) A label is a single identifier that is followed by a colon (:)
-* 
-* 4) Labels follow the same rules for formatting as identifiers.
-* 
-* 5) For readability, they are commonly expressed using uppercase letters in
-* snake_case with underscores between words.
-* 
-* 6) When dealing with only one loop, labels do not add any value, but they are 
-* extremely useful in nested loops.
-* ------------
-*/
+ * @author	Saim Kuru
+ * @version 1.0
+ * ------------
+ * Objectives:
+ * ------------ 
+ * 1. Understanding LABELS
+ * ------------ 
+ * Difficulty: Easy
+ * ------------
+ * NOTES
+ * ------------
+ * 1) Code blocks, if statements, switch statements, and loops can all have 
+ * optional labels.
+ * 
+ * 2) A label is an optional pointer to the head of a statement that allows the
+ * application flow to jump to it or break from it.
+ * 
+ * 3) A label is a single identifier that is followed by a colon (:)
+ * 
+ * 4) Labels follow the same rules for formatting as identifiers.
+ * 
+ * 5) For readability, they are commonly expressed using uppercase letters in
+ * snake_case with underscores between words.
+ * 
+ * 6) When dealing with only one loop, labels do not add any value, but they are 
+ * extremely useful in nested loops.
+ * ------------
+ */
 
-/* Terminal commands to run program
+/* 
+ * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % javac org/curlybrace/oopj/ocp1z0_829/ch03/mystudies/Study012_OptionalLabels1.java
  * curlybrace@saim-MacBook-Pro src % java org.curlybrace.oopj.ocp1z0_829.ch03.mystudies.Study012_OptionalLabels1      
  */

@@ -1,37 +1,37 @@
 package org.curlybrace.oopj.ocp1z0_829.ch03.mystudies;
 
 /**
-* @author	Saim Kuru
-* @version 1.0
-* ------------
-* Objectives:
-* ------------ 
-* 1. Understanding Switch Expression
-* ------------ 
-* Difficulty: Easy
-* ------------
-* NOTES
-* ------------
-* 1) Switch expressions were officially added to Java 14
-* 
-* 2) Switch expression is a much more compact form of a switch statement,
-* capable of returning a value. Switch expressions can return values but
-* they don't have to.
-* 
-* 3) All of the branches of a switch expression that do not throw an
-* exception must return a consistent data type(if the switch expression
-* returns a value). 
-* 
-* 4) If the switch expression returns a value, then every branch that isn't
-* a case expression must yield a value.
-* 
-* 5) A default branch is required unless all cases are covered or no value
-* is returned by the siwtch expression.
-* 
-* 6) Like a traditional switch statement, a switch expression supports zero
-* or many case branches and an optional default branch.
-* 
-* Syntax: 
+ * @author	Saim Kuru
+ * @version 1.0
+ * ------------
+ * Objectives:
+ * ------------ 
+ * 1. Understanding Switch Expression
+ * ------------ 
+ * Difficulty: Easy
+ * ------------
+ * NOTES
+ * ------------
+ * 1) Switch expressions were officially added to Java 14
+ * 
+ * 2) Switch expression is a much more compact form of a switch statement,
+ * capable of returning a value. Switch expressions can return values but
+ * they don't have to.
+ * 
+ * 3) All of the branches of a switch expression that do not throw an
+ * exception must return a consistent data type(if the switch expression
+ * returns a value). 
+ * 
+ * 4) If the switch expression returns a value, then every branch that isn't
+ * a case expression must yield a value.
+ * 
+ * 5) A default branch is required unless all cases are covered or no value
+ * is returned by the siwtch expression.
+ * 
+ * 6) Like a traditional switch statement, a switch expression supports zero
+ * or many case branches and an optional default branch.
+ * 
+ * Syntax: 
 	 switch(expression/variableToTest) {
 	  case constantexpression1 -> expression1;          // case expression
 	  case constantexpression2 -> { statement1;
@@ -45,10 +45,11 @@ package org.curlybrace.oopj.ocp1z0_829.ch03.mystudies;
 	                                                    // all possible case statement values are not handled
 	                                                    
 	 }
-* ------------ 
-*/
+ * ------------ 
+ */
 
-/* Terminal commands to run program
+/*
+ * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % javac org/curlybrace/oopj/ocp1z0_829/ch03/mystudies/Study008_SwitchExpressionSample1.java
  * curlybrace@saim-MacBook-Pro src % java org.curlybrace.oopj.ocp1z0_829.ch03.mystudies.Study008_SwitchExpressionSample1      
  */

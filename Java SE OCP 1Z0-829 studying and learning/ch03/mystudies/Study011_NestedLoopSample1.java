@@ -1,20 +1,21 @@
 package org.curlybrace.oopj.ocp1z0_829.ch03.mystudies;
 
 /**
-* @author	Saim Kuru
-* @version 1.0
-* ------------
-* Objectives:
-* ------------ 
-* 1. Understanding Nested Loops
-* ------------ 
-* Difficulty: Easy
-* ------------
-* NOTES
-* ------------
-*/
+ * @author	Saim Kuru
+ * @version 1.0
+ * ------------
+ * Objectives:
+ * ------------ 
+ * 1. Understanding Nested Loops
+ * ------------ 
+ * Difficulty: Easy
+ * ------------
+ * NOTES
+ * ------------
+ */
 
-/* Terminal commands to run program
+/* 
+ * Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % javac org/curlybrace/oopj/ocp1z0_829/ch03/mystudies/Study011_NestedLoopSample1.java
  * curlybrace@saim-MacBook-Pro src % java org.curlybrace.oopj.ocp1z0_829.ch03.mystudies.Study011_NestedLoopSample1      
  */
