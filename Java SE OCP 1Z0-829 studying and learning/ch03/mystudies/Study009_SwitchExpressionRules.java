@@ -1,23 +1,45 @@
 package org.curlybrace.oopj.ocp1z0_829.ch03.mystudies;
 
+/**
+* @author	Saim Kuru
+* @version 1.0
+* ------------
+* Objectives:
+* ------------ 
+* 1. Understanding Switch Expression Rules
+* ------------ 
+* Difficulty: Easy
+* ------------
+* NOTES
+* ------------ 
+*/
+
 /* Terminal commands to run program
  * curlybrace@saim-MacBook-Pro src % javac org/curlybrace/oopj/ocp1z0_829/ch03/mystudies/Study009_SwitchExpressionRules.java
  * curlybrace@saim-MacBook-Pro src % java org.curlybrace.oopj.ocp1z0_829.ch03.mystudies.Study009_SwitchExpressionRules      
  */
 
 public class Study009_SwitchExpressionRules {
-
+	static {
+		System.out.println("""
+		--------------------------------------------------------	
+		S w i t c h   E x p r e s s i o n   R u l e s
+		--------------------------------------------------------			
+		""");
+	}
 	public static void main(String[] args) {
 		System.out.println("""
-		/* Rule 1:
-		 * -------
-		 * If the switch expression returns a value; 
-		 * All of the branches of a switch expression that do not throw an exception must return a consistent data type
-		 */
-		 ----------------------------------------
-		 """);
-		int a = 10;
-		int size = switch(a) {
+		--------------------------------------------------------		
+		Rule 1:
+		--------------------------------------------------------
+		If the switch expression returns a value; 
+		All of the branches of a switch expression that do not 
+		throw an exception must return a consistent data type
+		--------------------------------------------------------
+		""");
+		
+		int variableToTest = 10;
+		int size = switch(variableToTest) {
 			case 5 -> 1;
 			case 10 -> (short)2;
 			default -> 5;
@@ -25,43 +47,63 @@ public class Study009_SwitchExpressionRules {
 			//case 40 -> 4L;		//	DOES NOT COMPILE: Type mismatch: cannot convert from long to int
 			//case 50 -> null;	//	DOES NOT COMPILE: Type mismatch: cannot convert from null to int
 		};
+		
 		System.out.println("""
-		/* Rule 2:
-		 * -------
-		 * If the switch expression returns a value; 
-		 * Every branch that isn't an expression must yield a value
-		 */
-		 ----------------------------------------
-		 """);
+		--------------------------------------------------------
+		Rule 2:
+		--------------------------------------------------------
+		If the switch expression returns a value; 
+		Every branch that isn't an expression must yield a value
+		--------------------------------------------------------
+		""");
+		
 		int fish = 5;
 		int length = 12;
 		var name = switch(fish) {
 			case 1 -> "Goldfish";
-			//case 2 -> {}	//	DOES NOT COMPILE: A switch labeled block in a switch expression should not complete normally
-			//case 3 -> {
-			//	if(length > 10) yield "Blobfish";
-			//}				//	DOES NOT COMPILE: A switch labeled block in a switch expression should not complete normally
+			/*
+			//case 2 -> {}
+			-----------------
+			DOES NOT COMPILE:
+			------------------ 
+			switch rule completes without providing a value
+			case 2 -> {}	
+			           ^
+            (switch rules in switch expressions must either provide a value or throw)
+			*/
+			/*case 3 -> {
+				if(length > 10) yield "Blobfish";
+			}*/				//	DOES NOT COMPILE: switch rule completes without providing a value
 			case 2 -> {yield "Bigfish";}	
 			case 3 -> {
 				if(length > 10) yield "Blobfish"; else yield "Unknown fish";
 			}	
 			default -> "Swordfish";
 		};
+		
 		System.out.println("""
-		/* Rule 3:
-		 * -------
-		 * If the switch expression returns a value; 
-		 * A default branch is required unless all cases are covered.
-		 * 
-		 */
-		 ----------------------------------------				
+		--------------------------------------------------------		
+		Rule 3:
+		--------------------------------------------------------
+		If the switch expression returns a value; 
+		A default branch is required unless all cases are covered. 
+		--------------------------------------------------------				
 		""");
 		int canis = 2;
-		//String type = switch(canis) {
-		//	case 1 -> "dog";
-		//	case 2 -> "wolf";
-		//	case 3 -> "coyote";
-		//};	//	DOES NOT COMPILE : A switch expression should have a default case
+		/*
+		String type2 = switch(canis) {
+			case 1 -> "dog";
+			case 2 -> "wolf";
+			case 3 -> "coyote";
+		};
+		------------------
+		DOES NOT COMPILE : 
+		-------------------
+		the switch expression does not cover all possible input values
+		String type2 = switch(canis) {
+		               ^
+		-------------------               
+		*/
 		String type = switch(canis) {
 			case 1 -> "dog";
 			case 2 -> "wolf";
