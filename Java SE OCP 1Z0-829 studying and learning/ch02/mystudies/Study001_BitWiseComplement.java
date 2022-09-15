@@ -6,9 +6,12 @@ package org.curlybrace.oopj.ocp1z0_829.ch02.mystudies;
  * ------------
  * Objectives:
  * ------------ 
- * 1. Understanding Bitwise Complement operator
+ * 1. Understanding Bitwise Complement operator and 
+ *    evaluating bitwise complement of an integral value.
  * ------------
  * Difficulty: Medium
+ * ------------ 
+ * NOTES
  * ------------ 
  */
 
@@ -57,11 +60,15 @@ public class Study001_BitWiseComplement {
 		byte bitwiseComplementOfb3 = (byte)~b3;
 		byte bitwiseComplementOfb127 = (byte)~b127;
 		//
+		System.out.println("-------------------------------------");
+		System.out.println("           E X A M P L E S           ");
+		System.out.println("-------------------------------------");
 		System.out.println("bitwise complementOf 0 is " + bitwiseComplementOfb0);
 		System.out.println("bitwise complementOf 1 is " + bitwiseComplementOfb1);
 		System.out.println("bitwise complementOf 2 is " + bitwiseComplementOfb2);
 		System.out.println("bitwise complementOf 3 is " + bitwiseComplementOfb3);
 		System.out.println("bitwise complementOf 127 is " + bitwiseComplementOfb127);
+		System.out.println("-------------------------------------");
 		//
 		// Bitwise complement operator(~) is only defined for integral numeric types
 		// (byte, short, char, int and long).
@@ -70,7 +77,7 @@ public class Study001_BitWiseComplement {
 		
 		/*
 		bitwiseComplementOff0 = ~f0;
-		
+		------------------
 		DOES NOT COMPILE:
 		------------------
 		error: bad operand type float for unary operator '~'

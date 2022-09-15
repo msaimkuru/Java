@@ -10,6 +10,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch02.mystudies;
  * ------------ 
  * Difficulty: Easy
  * ------------ 
+ * NOTES
+ * ------------ 
  */
 
 /* Terminal commands to run program

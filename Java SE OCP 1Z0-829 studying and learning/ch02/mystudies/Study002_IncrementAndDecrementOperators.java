@@ -10,6 +10,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch02.mystudies;
  * ------------ 
  * Difficulty: Easy
  * ------------ 
+ * NOTES
+ * ------------ 
  */
 
 /* 
@@ -31,7 +33,7 @@ public class Study002_IncrementAndDecrementOperators {
 		 Post-increment\tw++\tIncreases the value by 1 and returns the original value 
 		 Post-decrement\tw--\tDecreases the value by 1 and returns the original value
 		 ----------------------------------------------------------------------------------------------------------------
-		 An   I n t e r e s t i n g   E x a m p l e 
+		 A n   I n t e r e s t i n g   E x a m p l e 
 		 ----------------------------------------------------------------------------------------------------------------
 		 int i = 1;
 		 i = i++;

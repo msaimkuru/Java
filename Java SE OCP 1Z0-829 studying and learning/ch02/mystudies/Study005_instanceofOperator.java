@@ -10,6 +10,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch02.mystudies;
  * ------------ 
  * Difficulty: Medium
  * ------------ 
+ * NOTES
+ * ------------ 
  */
 
 /* Terminal commands to run program
@@ -85,9 +87,8 @@ public class Study005_instanceofOperator {
 		*/                                   
 	}
 	
-	@SuppressWarnings("removal")
 	public static void printIfObjectInstanceOfType() {
-		Integer intgr = new Integer(5);
+		Integer intgr = Integer.valueOf(5);
 	    Number num = 9;
 
 	    System.out.println("intgr instanceof Number-->" + (intgr instanceof Number));
@@ -95,11 +96,10 @@ public class Study005_instanceofOperator {
 	    System.out.println("num instanceof Integer-->" + (num instanceof Integer));
 	}
 	
-	@SuppressWarnings("removal")
 	public static void main(String[] args) {
-		printTime(new Integer(10));			// Prints-->10 o'clock.....
-		printTime(new Byte((byte)10));		// Prints-->10 o'clock*****
-		printTime(new Float(10.0f));		// Prints-->10.0
+		printTime(Integer.valueOf(10));		// Prints-->10 o'clock.....
+		printTime(Byte.valueOf((byte)10));	// Prints-->10 o'clock*****
+		printTime(Float.valueOf(10.0f));		// Prints-->10.0
 		//
 		System.out.println("------------------------------");
 		System.out.println(nullInstanceOf());

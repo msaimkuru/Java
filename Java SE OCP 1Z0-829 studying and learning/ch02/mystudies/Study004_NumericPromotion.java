@@ -10,6 +10,8 @@ package org.curlybrace.oopj.ocp1z0_829.ch02.mystudies;
  * ------------ 
  * Difficulty: Medium
  * ------------ 
+ * NOTES
+ * ------------ 
  */
 
 /* Terminal commands to run program
@@ -75,7 +77,7 @@ public class Study004_NumericPromotion {
 		//
 		//i2 = i2 * l1;				//-> DOES NOT COMPILE: Type mismatch: cannot convert from long to int
 		i2 *= l1;					//-> COPMPILES: Compound assignment operator makes automatic casting by itself.
-									//-> i2 is promoted to a long and multiplied by l1 and the long result is casted to an int by compund operator itself.
+									//-> i2 is promoted to a long and multiplied by l1 and the long result is casted to an int by compound operator itself.
 		//
 		System.out.println("b1->" + b1);		// prints-->5
 		System.out.println("b2->" + b2);		// prints-->96
